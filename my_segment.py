@@ -24,7 +24,7 @@ def punctuator(text1):
     r_text = response.text
     return r_text.replace(',', '.').replace('?', '.').replace('!', '.').replace(';', '.').replace(':', '.').replace('-', '')
     
-def segment(method_name, text):
+def segment(text, method_name='NNsplit'):
     if method_name == 'deepsegment':
         return deepsegment_(text)
     elif method_name == 'NNsplit':
